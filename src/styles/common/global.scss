@@ -1,0 +1,21 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+*:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+html {
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
