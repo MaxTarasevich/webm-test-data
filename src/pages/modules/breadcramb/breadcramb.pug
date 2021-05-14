@@ -1,6 +1,4 @@
-p.container 
-    a Breadcrumb 1
-    span >
-    a Breadcrumb 2
-    span >
-    a Breadcrumb 3
+.container 
+    each val in breadcrumbs
+      a.button.is-light(href=val.href)=val.text 
+        span >

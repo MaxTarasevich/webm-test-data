@@ -1,16 +1,16 @@
 main.container
-    h1 Heading Level 1
+        h1.box.title.is-2=page_meta.h1
         .columns
             include ../aside/aside 
             .column.is-three-quarters
                 include ../main-navigation/main-nav 
-                include ../card/card 
-                include ../card/card 
-                include ../card/card 
-                include ../card/card 
-                include ../card/card 
-                include ../card/card
+                include ../pug-mixins/card-mixin
+                each val in stock
+                    +Card(val)
                 include ../main-navigation/main-nav 
 
-                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque accusantium ratione molestias soluta, provident nobis, assumenda dolorum voluptas incidunt inventore quia reiciendis quis? Quis quo molestias repellat? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda et at eveniet! Fugiat velit unde necessitatibus? Debitis illo vero aut. Iusto dolores, cupiditate error expedita veniam laborum repudiandae aspernatur eos?
+                
+                .box 
+                    each val in page_text
+                        p=val.content
             

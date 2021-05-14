@@ -1,8 +1,4 @@
 .container
   nav.navbar(role='navigation' aria-label='main navigation')
-      a.navbar-item(href='https://bulma.io/') Home
-      a.navbar-item(href='https://bulma.io/') Home
-      a.navbar-item(href='https://bulma.io/') Home
-      a.navbar-item(href='https://bulma.io/') Home
-      a.navbar-item(href='https://bulma.io/') Home
-    
+    each val in nav
+      a.navbar-item(href=val.href)=val.text
