@@ -1,6 +1,6 @@
 main.container
-        h1.box.title.is-2=page_meta.h1
-        .columns
+        h1.box.title.is-2(style="margin-top:10px;text-align:center;")=page_meta.h1
+        .columns.is-desktop
             include ../aside/aside 
             .column.is-three-quarters
                 include ../main-navigation/main-nav 
@@ -12,5 +12,5 @@ main.container
                 
                 .box 
                     each val in page_text
-                        p=val.content
-            
+                        p.box &nbsp;&nbsp; #{val.content}
+                
